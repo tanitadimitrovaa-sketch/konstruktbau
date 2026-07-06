@@ -36,33 +36,33 @@ export default function UeberUns() {
             </div>
           </Link>
 
-         <div className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest font-semibold text-slate-700">
-  <Link href="/" style={{ color: "inherit" }}>
-    Home
-  </Link>
+          <div className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest font-semibold text-slate-700">
+            <Link href="/" style={{ color: "inherit" }}>
+              Home
+            </Link>
 
-  <Link href="/ueber-uns" style={{ color: logoBlue }}>
-    Über uns
-  </Link>
+            <Link href="/ueber-uns" style={{ color: logoBlue }}>
+              Über uns
+            </Link>
 
-  <Link href="/services" style={{ color: "inherit" }}>
-    Dienstleistungen
-  </Link>
+            <Link href="/services" style={{ color: "inherit" }}>
+              Dienstleistungen
+            </Link>
 
-  <Link href="/projekte" style={{ color: "inherit" }}>
-    Projekte
-  </Link>
+            <Link href="/projekte" style={{ color: "inherit" }}>
+              Projekte
+            </Link>
 
-  <Link href="/karriere" style={{ color: "inherit" }}>
-    Karriere
-  </Link>
+            <Link href="/karriere" style={{ color: "inherit" }}>
+              Karriere
+            </Link>
 
-  <Link
-    href="/kontakt"
-    className="text-white px-8 py-3 rounded-sm text-xs shadow-md"
-    style={{ backgroundColor: "#0f172a" }}
-  >
-    Kontakt
+            <Link
+              href="/kontakt"
+              className="text-white px-8 py-3 rounded-sm text-xs shadow-md"
+              style={{ backgroundColor: "#0f172a" }}
+            >
+              Kontakt
             </Link>
           </div>
         </div>
@@ -127,49 +127,53 @@ export default function UeberUns() {
                 Erst wenn jedes Detail stimmt, ist die Arbeit fertig.
               </blockquote>
 
-              <div className="h-[2px] w-20 mt-8" style={{ backgroundColor: logoBlue }} />
+              <div
+                className="h-[2px] w-20 mt-8"
+                style={{ backgroundColor: logoBlue }}
+              />
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-14">
-            <div className="lg:col-span-5 border border-white/10 bg-slate-900 overflow-hidden">
-              <img
-                src="/team/plamen-buyukliev.png"
-                alt="Plamen Buyukliev"
-                className="w-full h-[420px] md:h-[580px] object-cover"
-              />
+          <div className="border border-white/10 bg-white/[0.025] p-8 md:p-14 mb-14">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-blue-300 mb-6">
+              Geschäftsführung
+            </p>
+
+            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight leading-none mb-6">
+              Plamen <br />
+              <span style={{ color: logoBlue }}>Buyukliev</span>
+            </h2>
+
+            <p className="text-lg md:text-xl font-black uppercase tracking-tight text-white mb-8">
+              Geschäftsführer & Leitender Trockenbau-Spezialist
+            </p>
+
+            <div className="max-w-5xl space-y-6">
+              <p className="text-slate-300 leading-relaxed text-base md:text-lg">
+                Plamen Buyukliev verbindet handwerkliche Erfahrung mit
+                organisatorischer Verantwortung. Als Geschäftsführer und
+                leitender Spezialist im Trockenbau steht er für präzise
+                Ausführung, technisches Verständnis und einen klaren Anspruch
+                an Qualität auf jeder Baustelle.
+              </p>
+
+              <p className="text-slate-300 leading-relaxed text-base md:text-lg">
+                Mit strukturiertem Arbeiten, sauberer Planung und persönlichem
+                Einsatz begleitet er Projekte vom ersten Schritt bis zur finalen
+                Ausführung. Dabei stehen Qualität, Termintreue und eine
+                professionelle Baustellenorganisation immer im Mittelpunkt.
+              </p>
             </div>
 
-            <div className="lg:col-span-7 border border-white/10 bg-white/[0.025] p-6 md:p-8 flex flex-col justify-between">
-              <div>
-                <p className="text-xs font-black uppercase tracking-[0.35em] text-blue-300 mb-6">
-                  Geschäftsführung
-                </p>
-
-                <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight leading-none mb-6">
-                  Plamen <br />
-                  <span style={{ color: logoBlue }}>Buyukliev</span>
-                </h2>
-
-                <p className="text-lg md:text-xl font-black uppercase tracking-tight text-white mb-6">
-                  Geschäftsführer & Leitender Trockenbau-Spezialist
-                </p>
-
-                <p className="text-slate-300 leading-relaxed font-light text-base md:text-lg max-w-3xl">
-                  Plamen Buyukliev verbindet handwerkliche Erfahrung mit
-                  organisatorischer Verantwortung. Als Geschäftsführer und
-                  leitender Spezialist im Trockenbau steht er für präzise
-                  Ausführung, technisches Verständnis und einen klaren Anspruch
-                  an Qualität auf jeder Baustelle.
-                </p>
-              </div>
-
-              <div className="mt-10 border-l-2 pl-6" style={{ borderColor: logoBlue }}>
-                <p className="text-xl md:text-2xl font-black uppercase tracking-tight leading-tight text-white">
-                  Qualität entsteht nicht am Ende eines Projekts —
-                  sie entsteht bei jedem einzelnen Arbeitsschritt.
-                </p>
-              </div>
+            <div
+              className="mt-12 border-l-2 pl-8"
+              style={{ borderColor: logoBlue }}
+            >
+              <p className="text-2xl md:text-4xl font-black uppercase tracking-tight leading-tight text-white">
+                Qualität entsteht nicht am Ende eines Projekts —
+                <br />
+                sie entsteht bei jedem einzelnen Arbeitsschritt.
+              </p>
             </div>
           </div>
 
@@ -185,9 +189,7 @@ export default function UeberUns() {
                 <p className="text-sm font-black uppercase tracking-[0.25em] text-blue-300 mb-3">
                   {stat.label}
                 </p>
-                <p className="text-slate-400 leading-relaxed">
-                  {stat.text}
-                </p>
+                <p className="text-slate-400 leading-relaxed">{stat.text}</p>
               </div>
             ))}
           </div>
@@ -289,10 +291,16 @@ export default function UeberUns() {
           </div>
 
           <div className="flex flex-col md:flex-row items-center gap-3 md:gap-8 text-sm font-semibold text-slate-500">
-            <a href={phoneHref} className="hover:text-slate-950 transition-colors">
+            <a
+              href={phoneHref}
+              className="hover:text-slate-950 transition-colors"
+            >
               {phoneDisplay}
             </a>
-            <a href={`mailto:${email}`} className="hover:text-slate-950 transition-colors">
+            <a
+              href={`mailto:${email}`}
+              className="hover:text-slate-950 transition-colors"
+            >
               {email}
             </a>
           </div>
