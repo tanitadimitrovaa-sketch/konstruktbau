@@ -1,7 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const logoBlue = "#42B4FF";
 const email = "info@konstruktbaugmbh.ch";
@@ -45,49 +46,99 @@ function CheckItem({ children }) {
 }
 
 export default function KarrierePage() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <main className="min-h-screen bg-white text-slate-950 font-sans selection:bg-blue-100">
-      <nav className="fixed w-full z-50 bg-white border-b border-gray-100 h-28 md:h-32 top-0">
-        <div className="max-w-7xl mx-auto px-6 h-full flex justify-between items-center">
+      <nav className="fixed w-full z-50 bg-white border-b border-gray-100 h-24 md:h-32 top-0">
+        <div className="max-w-7xl mx-auto px-5 md:px-6 h-full flex justify-between items-center">
           <Link href="/" className="relative flex items-center h-full group">
-            <div className="relative w-40 md:w-56 h-full flex items-center overflow-hidden">
+            <div className="relative w-36 md:w-56 h-full flex items-center overflow-hidden">
               <img
                 src="/logo.png"
                 alt="KonstruktBau Logo"
-                className="w-full h-auto max-h-[100px] md:max-h-[120px] object-contain transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-auto max-h-[90px] md:max-h-[120px] object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </div>
           </Link>
 
           <div className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest font-semibold text-slate-700">
-            <Link href="/" style={{ color: "inherit" }}>
-              Home
-            </Link>
-            <Link href="/ueber-uns" style={{ color: "inherit" }}>
-              Über uns
-            </Link>
-            <Link href="/services" style={{ color: "inherit" }}>
-              Dienstleistungen
-            </Link>
-            <Link href="/projekte" style={{ color: "inherit" }}>
-              Projekte
-            </Link>
+            <Link href="/">Home</Link>
+            <Link href="/ueber-uns">Über uns</Link>
+            <Link href="/services">Dienstleistungen</Link>
+            <Link href="/projekte">Projekte</Link>
+
             <Link href="/karriere" style={{ color: logoBlue }}>
               Karriere
             </Link>
 
             <Link
               href="/kontakt"
-              className="text-white px-8 py-3 rounded-sm text-xs shadow-md"
+              className="text-white px-8 py-3 rounded-sm transition-all text-xs shadow-md hover:bg-slate-800"
               style={{ backgroundColor: "#0f172a" }}
             >
               Kontakt
             </Link>
           </div>
+
+          <button
+            type="button"
+            onClick={() => setMenuOpen((prev) => !prev)}
+            className="md:hidden w-11 h-11 flex items-center justify-center border border-slate-200 text-slate-950 text-2xl font-light"
+            aria-label="Menü öffnen"
+          >
+            {menuOpen ? "×" : "☰"}
+          </button>
         </div>
+
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.25 }}
+              className="md:hidden bg-white border-t border-slate-100 px-6 py-6 shadow-xl"
+            >
+              <div className="flex flex-col gap-5 text-sm uppercase tracking-[0.25em] font-black text-slate-800">
+                <Link href="/" onClick={() => setMenuOpen(false)}>
+                  Home
+                </Link>
+
+                <Link href="/ueber-uns" onClick={() => setMenuOpen(false)}>
+                  Über uns
+                </Link>
+
+                <Link href="/services" onClick={() => setMenuOpen(false)}>
+                  Dienstleistungen
+                </Link>
+
+                <Link href="/projekte" onClick={() => setMenuOpen(false)}>
+                  Projekte
+                </Link>
+
+                <Link
+                  href="/karriere"
+                  onClick={() => setMenuOpen(false)}
+                  style={{ color: logoBlue }}
+                >
+                  Karriere
+                </Link>
+
+                <Link
+                  href="/kontakt"
+                  onClick={() => setMenuOpen(false)}
+                  className="bg-slate-950 text-white px-6 py-4 text-center mt-2"
+                >
+                  Kontakt
+                </Link>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
 
-      <section className="pt-28 md:pt-32 pb-8 md:pb-12 px-6 bg-white">
+      <section className="pt-24 md:pt-32 pb-8 md:pb-12 px-5 md:px-6 bg-white">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 18 }}
@@ -96,7 +147,7 @@ export default function KarrierePage() {
             className="text-center mb-5"
           >
             <p
-              className="text-[10px] font-black uppercase tracking-[0.45em] mb-3"
+              className="text-[10px] font-black uppercase tracking-[0.35em] md:tracking-[0.45em] mb-3"
               style={{ color: logoBlue }}
             >
               Karriere
@@ -118,15 +169,15 @@ export default function KarrierePage() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.12 }}
-            className="bg-slate-950 text-white p-6 md:p-7 shadow-2xl rounded-sm"
+            className="bg-slate-950 text-white p-5 md:p-7 shadow-2xl rounded-sm"
           >
             <div className="border-b border-white/10 pb-5 mb-5">
               <div className="text-center">
-                <p className="text-[10px] uppercase tracking-[0.35em] font-black text-blue-300 mb-3">
+                <p className="text-[10px] uppercase tracking-[0.3em] md:tracking-[0.35em] font-black text-blue-300 mb-3">
                   Offene Stelle
                 </p>
 
-                <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight mb-5">
+                <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight mb-5 leading-tight">
                   Trockenbaumonteur (100%)
                 </h2>
 
@@ -135,7 +186,6 @@ export default function KarrierePage() {
                     <span className="text-white font-bold">Standort:</span>{" "}
                     Schweiz
                   </p>
-
                   <p>
                     <span className="text-white font-bold">Eintritt:</span>{" "}
                     Nach Vereinbarung
@@ -144,7 +194,7 @@ export default function KarrierePage() {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-base md:text-lg font-black uppercase tracking-tight mb-3">
                   Ihre Aufgaben
@@ -173,7 +223,7 @@ export default function KarrierePage() {
                 Wir bieten
               </h3>
 
-              <ul className="grid sm:grid-cols-2 gap-2 mb-5">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-5">
                 {offers.map((item) => (
                   <CheckItem key={item}>{item}</CheckItem>
                 ))}
@@ -182,14 +232,14 @@ export default function KarrierePage() {
               <div className="flex flex-col sm:flex-row justify-center gap-3">
                 <a
                   href={`mailto:${email}?subject=Bewerbung%20als%20Trockenbaumonteur%20bei%20KonstruktBau`}
-                  className="bg-white text-slate-950 px-7 py-3.5 text-center text-xs font-black uppercase tracking-[0.22em] hover:bg-slate-100 transition-all"
+                  className="w-full sm:w-auto bg-white text-slate-950 px-5 md:px-7 py-3.5 text-center text-xs font-black uppercase tracking-[0.16em] md:tracking-[0.22em] hover:bg-slate-100 transition-all"
                 >
                   Lebenslauf senden
                 </a>
 
                 <a
                   href={phoneHref}
-                  className="border border-white/20 px-7 py-3.5 text-center text-xs font-black uppercase tracking-[0.22em] hover:bg-white/10 transition-all"
+                  className="w-full sm:w-auto border border-white/20 px-5 md:px-7 py-3.5 text-center text-xs font-black uppercase tracking-[0.16em] md:tracking-[0.22em] hover:bg-white/10 transition-all"
                 >
                   {phoneDisplay}
                 </a>
@@ -199,23 +249,25 @@ export default function KarrierePage() {
         </div>
       </section>
 
-      <footer className="bg-white border-t border-slate-100 px-6 py-5">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-4">
+      <footer className="bg-white border-t border-slate-100 px-5 md:px-6 py-8 md:py-5">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-5 md:gap-4">
+          <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
             <img
               src="/logo.png"
               alt="KonstruktBau Logo"
-              className="h-10 md:h-12 w-auto object-contain"
+              className="h-11 md:h-12 w-auto object-contain"
             />
 
-            <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-slate-400">
+            <p className="text-[10px] uppercase tracking-[0.25em] md:tracking-[0.3em] font-bold text-slate-400">
               © 2026 KonstruktBau GmbH
             </p>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center gap-3 md:gap-7 text-sm font-semibold text-slate-500">
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-7 text-xs md:text-sm font-semibold text-slate-500 max-w-full">
             <a href={phoneHref}>{phoneDisplay}</a>
-            <a href={`mailto:${email}`}>{email}</a>
+            <a href={`mailto:${email}`} className="break-all text-center">
+              {email}
+            </a>
           </div>
         </div>
       </footer>
