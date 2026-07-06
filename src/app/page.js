@@ -181,7 +181,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/55 to-slate-950/25" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
 
-        <div className="relative z-10 max-w-7xl mx-auto min-h-screen px-5 md:px-6 flex items-center py-12 md:py-0">
+        <div className="relative z-10 max-w-7xl mx-auto min-h-screen px-5 md:px-6 flex items-start md:items-center pt-24 md:pt-0">
           <motion.div
             initial={{ opacity: 0, y: 26 }}
             animate={{ opacity: 1, y: 0 }}
