@@ -10,8 +10,8 @@ const phoneDisplay = "+41 78 880 00 26";
 const phoneHref = "tel:+41788800026";
 
 const stats = [
-  { value: "11+", label: "Jahre Erfahrung", text: "im Innenausbau" },
-  { value: "6+", label: "Jahre Schweiz", text: "mit Schweizer Qualitätsanspruch" },
+  { value: "20+", label: "Jahre Erfahrung", text: "im Innenausbau" },
+  { value: "10+", label: "Jahre Schweiz", text: "mit Schweizer Qualitätsanspruch" },
   { value: "2", label: "Gründer", text: "Plamen Buyukliev & Ignat Techev" },
 ];
 
@@ -168,8 +168,8 @@ export default function UeberUns() {
                 </p>
 
                 <p>
-                  Mit insgesamt über 11 Jahren Erfahrung in der Branche und mehr
-                  als 6 Jahren aktiver Arbeit in der Schweiz kennen wir die
+                  Mit insgesamt über 20 Jahren Erfahrung in der Branche und mehr
+                  als 10 Jahren aktiver Arbeit in der Schweiz kennen wir die
                   Anforderungen an saubere, präzise und termingerechte
                   Ausführung.
                 </p>
