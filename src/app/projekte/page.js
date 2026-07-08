@@ -10,8 +10,8 @@ const phoneDisplay = "+41 78 880 00 26";
 const phoneHref = "tel:+41788800026";
 
 const stats = [
-  { value: "11+", label: "Jahre Erfahrung" },
-  { value: "6+", label: "Jahre in der Schweiz" },
+  { value: "20+", label: "Jahre Erfahrung" },
+  { value: "10+", label: "Jahre in der Schweiz" },
   { value: "100%", label: "Fokus auf Qualität" },
   { value: "4", label: "Leistungsbereiche" },
 ];
