@@ -6,8 +6,14 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const logoBlue = "#42B4FF";
 const email = "info@konstruktbaugmbh.ch";
-const phoneDisplay = "+41 78 880 00 26";
-const phoneHref = "tel:+41788800026";
+
+const plamenName = "Plamen Buyukliev";
+const plamenPhoneDisplay = "+41 78 880 00 26";
+const plamenPhoneHref = "tel:+41788800026";
+
+const ignatName = "Ignat Techev";
+const ignatPhoneDisplay = "+41 79 957 54 14";
+const ignatPhoneHref = "tel:+41799575414";
 
 export default function Kontakt() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -255,17 +261,37 @@ export default function Kontakt() {
                   Direkter Kontakt
                 </p>
 
-                <div className="space-y-4">
+                <div className="space-y-5">
                   <div>
                     <p className="text-[10px] uppercase tracking-[0.25em] text-slate-500 font-black mb-1.5">
-                      Telefon
+                      Ansprechpartner
                     </p>
-                    <a
-                      href={phoneHref}
-                      className="text-lg font-black hover:text-blue-300 transition-colors"
-                    >
-                      {phoneDisplay}
-                    </a>
+
+                    <div className="space-y-4">
+                      <div>
+                        <p className="text-sm font-semibold text-slate-300 mb-1">
+                          {plamenName}
+                        </p>
+                        <a
+                          href={plamenPhoneHref}
+                          className="text-lg font-black hover:text-blue-300 transition-colors"
+                        >
+                          {plamenPhoneDisplay}
+                        </a>
+                      </div>
+
+                      <div>
+                        <p className="text-sm font-semibold text-slate-300 mb-1">
+                          {ignatName}
+                        </p>
+                        <a
+                          href={ignatPhoneHref}
+                          className="text-lg font-black hover:text-blue-300 transition-colors"
+                        >
+                          {ignatPhoneDisplay}
+                        </a>
+                      </div>
+                    </div>
                   </div>
 
                   <div>
@@ -324,8 +350,17 @@ export default function Kontakt() {
             </p>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-8 text-xs md:text-sm font-semibold text-slate-500 max-w-full">
-            <a href={phoneHref}>{phoneDisplay}</a>
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-xs md:text-sm font-semibold text-slate-500 max-w-full text-center md:text-left">
+            <div className="flex flex-col">
+              <span className="text-slate-700">{plamenName}</span>
+              <a href={plamenPhoneHref}>{plamenPhoneDisplay}</a>
+            </div>
+
+            <div className="flex flex-col">
+              <span className="text-slate-700">{ignatName}</span>
+              <a href={ignatPhoneHref}>{ignatPhoneDisplay}</a>
+            </div>
+
             <a href={`mailto:${email}`} className="break-all text-center">
               {email}
             </a>
