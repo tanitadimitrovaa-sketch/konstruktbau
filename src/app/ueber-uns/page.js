@@ -40,25 +40,11 @@ export default function UeberUns() {
           </Link>
 
           <div className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest font-semibold text-slate-700">
-            <Link href="/" style={{ color: "inherit" }}>
-              Home
-            </Link>
-
-            <Link href="/ueber-uns" style={{ color: logoBlue }}>
-              Über uns
-            </Link>
-
-            <Link href="/services" style={{ color: "inherit" }}>
-              Dienstleistungen
-            </Link>
-
-            <Link href="/projekte" style={{ color: "inherit" }}>
-              Projekte
-            </Link>
-
-            <Link href="/karriere" style={{ color: "inherit" }}>
-              Karriere
-            </Link>
+            <Link href="/">Home</Link>
+            <Link href="/ueber-uns" style={{ color: logoBlue }}>Über uns</Link>
+            <Link href="/services">Dienstleistungen</Link>
+            <Link href="/projekte">Projekte</Link>
+            <Link href="/karriere">Karriere</Link>
 
             <Link
               href="/kontakt"
@@ -89,9 +75,7 @@ export default function UeberUns() {
               className="md:hidden bg-white border-t border-slate-100 px-6 py-6 shadow-xl"
             >
               <div className="flex flex-col gap-5 text-sm uppercase tracking-[0.25em] font-black text-slate-800">
-                <Link href="/" onClick={() => setMenuOpen(false)}>
-                  Home
-                </Link>
+                <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
 
                 <Link
                   href="/ueber-uns"
@@ -193,34 +177,74 @@ export default function UeberUns() {
           </div>
 
           <div className="border border-white/10 bg-white/[0.025] p-5 md:p-14 mb-10 md:mb-14">
-            <p className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] md:tracking-[0.35em] text-blue-300 mb-5 md:mb-6">
-              Geschäftsführung
+            <p className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] md:tracking-[0.35em] text-blue-300 mb-6 md:mb-8">
+              Die Menschen hinter KonstruktBau
             </p>
 
-            <h2 className="text-3xl md:text-6xl font-black uppercase tracking-tight leading-none mb-5 md:mb-6">
-              Plamen <br />
-              <span style={{ color: logoBlue }}>Buyukliev</span>
-            </h2>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-start mb-10 md:mb-14">
+              <div className="lg:col-span-4">
+                <div className="aspect-[4/5] w-full overflow-hidden border border-white/10 bg-white/[0.03]">
+                  <img
+                    src="/plamen-buyukliev.jpg"
+                    alt="Plamen Buyukliev"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
 
-            <p className="text-sm md:text-xl font-black uppercase tracking-tight text-white mb-6 md:mb-8 leading-relaxed">
-              Geschäftsführer & Leitender Trockenbau-Spezialist
-            </p>
+              <div className="lg:col-span-8">
+                <h2 className="text-3xl md:text-6xl font-black uppercase tracking-tight leading-none mb-5 md:mb-6">
+                  Plamen <br />
+                  <span style={{ color: logoBlue }}>Buyukliev</span>
+                </h2>
 
-            <div className="max-w-5xl space-y-5 md:space-y-6">
-              <p className="text-slate-300 leading-relaxed text-sm md:text-lg">
-                Plamen Buyukliev verbindet handwerkliche Erfahrung mit
-                organisatorischer Verantwortung. Als Geschäftsführer und
-                leitender Spezialist im Trockenbau steht er für präzise
-                Ausführung, technisches Verständnis und einen klaren Anspruch
-                an Qualität auf jeder Baustelle.
+                <p className="text-sm md:text-xl font-black uppercase tracking-tight text-white mb-6 md:mb-8 leading-relaxed">
+                  Geschäftsführer & Leitender Trockenbau-Spezialist
+                </p>
+
+                <div className="space-y-5 md:space-y-6">
+                  <p className="text-slate-300 leading-relaxed text-sm md:text-lg">
+                    Plamen Buyukliev verbindet handwerkliche Erfahrung mit
+                    organisatorischer Verantwortung. Als Geschäftsführer und
+                    leitender Spezialist im Trockenbau steht er für präzise
+                    Ausführung, technisches Verständnis und einen klaren Anspruch
+                    an Qualität auf jeder Baustelle.
+                  </p>
+
+                  <p className="text-slate-300 leading-relaxed text-sm md:text-lg">
+                    Mit strukturiertem Arbeiten, sauberer Planung und persönlichem
+                    Einsatz begleitet er Projekte vom ersten Schritt bis zur finalen
+                    Ausführung. Dabei stehen Qualität, Termintreue und eine
+                    professionelle Baustellenorganisation immer im Mittelpunkt.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="border-t border-white/10 pt-8 md:pt-10">
+              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight leading-none mb-5 md:mb-6">
+                Ignat <br />
+                <span style={{ color: logoBlue }}>Techev</span>
+              </h2>
+
+              <p className="text-sm md:text-xl font-black uppercase tracking-tight text-white mb-6 md:mb-8 leading-relaxed">
+                Geschäftsführer
               </p>
 
-              <p className="text-slate-300 leading-relaxed text-sm md:text-lg">
-                Mit strukturiertem Arbeiten, sauberer Planung und persönlichem
-                Einsatz begleitet er Projekte vom ersten Schritt bis zur finalen
-                Ausführung. Dabei stehen Qualität, Termintreue und eine
-                professionelle Baustellenorganisation immer im Mittelpunkt.
-              </p>
+              <div className="max-w-5xl space-y-5 md:space-y-6">
+                <p className="text-slate-300 leading-relaxed text-sm md:text-lg">
+                  Ignat Techev ist Mitgründer und Geschäftsführer der
+                  KonstruktBau GmbH. Er steht für strukturierte Organisation,
+                  klare Abläufe und eine zuverlässige Koordination der Projekte.
+                </p>
+
+                <p className="text-slate-300 leading-relaxed text-sm md:text-lg">
+                  Mit einem lösungsorientierten Blick auf jedes Bauvorhaben sorgt
+                  er dafür, dass Kommunikation, Planung und Umsetzung Hand in Hand
+                  gehen. Sein Anspruch ist es, Projekte professionell zu begleiten
+                  und für Kunden wie Partner eine verlässliche Ansprechperson zu sein.
+                </p>
+              </div>
             </div>
 
             <div
