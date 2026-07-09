@@ -85,7 +85,7 @@ export default function Home() {
             <div className="relative w-36 md:w-56 h-full flex items-center overflow-hidden">
               <img
                 src="/logo.png"
-                alt="KonstruktBau Logo"
+                alt="KonstruktBau GmbH"
                 className="w-full h-auto max-h-[90px] md:max-h-[120px] object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </div>
