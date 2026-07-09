@@ -417,7 +417,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-5 text-center md:text-left">
             <img
               src="/logo.png"
-              alt="KonstruktBau Logo"
+              alt="KonstruktBau GmbH"
               className="h-11 md:h-14 w-auto object-contain"
             />
             <p className="text-[10px] md:text-xs uppercase tracking-[0.25em] md:tracking-[0.3em] font-bold text-slate-400">
